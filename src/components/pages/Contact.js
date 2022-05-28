@@ -1,22 +1,100 @@
-import React from 'react';
+import React, { useState } from 'react';
+import './Styles/Contact.css';
+import { validateEmail } from '../../utils/helpers';
 
-export default function Contact() {
+function Contact() {
+  // Here we set two state variables for firstName and lastName using `useState`
+  const [fullName, setFullName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
+
+  const handleInputChange = (e) => {
+   
+    const { name, value } = e.target;
+   
+    if (name === 'fullName') {
+      setFullName(value);
+
+    } else if (name === 'email') {
+      setEmail(value);
+    }
+    else {
+      setMessage(value)
+    }
+     
+  };
+
+  const handleFormSubmit = (e) => {
+   
+    e.preventDefault();
+    if (!validateEmail(email) || !fullName) {
+      setErrorMessage('Email Address or Full Name is invalid');
+
+      return;
+     
+    }
+   
+    alert(`Message sent to ${email}`);
+    setFullName('');
+    setEmail('');
+    setMessage('');
+    setErrorMessage("")
+  };
+
   return (
-    <div>
-      <h1>Contact Page</h1>
-      <p>
-        Integer cursus bibendum sem non pretium. Vestibulum in aliquet sem, quis
-        molestie urna. Aliquam semper ultrices varius. Aliquam faucibus sit amet
-        magna a ultrices. Aenean pellentesque placerat lacus imperdiet
-        efficitur. In felis nisl, luctus non ante euismod, tincidunt bibendum
-        mi. In a molestie nisl, eu sodales diam. Nam tincidunt lacus quis magna
-        posuere, eget tristique dui dapibus. Maecenas fermentum elementum
-        faucibus. Quisque nec metus vestibulum, egestas massa eu, sollicitudin
-        ipsum. Nulla facilisi. Sed ut erat ligula. Nam tincidunt nunc in nibh
-        dictum ullamcorper. Class aptent taciti sociosqu ad litora torquent per
-        conubia nostra, per inceptos himenaeos. Etiam ornare rutrum felis at
-        rhoncus. Etiam vel condimentum magna, quis tempor nulla.
-      </p>
+    <div className='contact' >
+      <aside>
+        <h3>Contact me</h3>
+        <div className="line "></div>
+
+      </aside>
+      <div >
+
+        <form className="form">
+          <div>
+            <input
+              value={fullName}
+              name="fullName"
+              onChange={handleInputChange}
+              type="text"
+              placeholder="Full Name"
+            />
+          </div>
+          <div>
+
+            <input
+              value={email}
+              name="email"
+              onChange={handleInputChange}
+              type="text"
+              placeholder="Email Address"
+            />
+          </div>
+          <div>
+
+            <textarea
+              value={message}
+              name="mesage"
+              onChange={handleInputChange}
+              type="text"
+              placeholder="Message"
+            />
+          </div>
+          <button className="btn btn-outline-warning" type="button" onClick={handleFormSubmit}>
+            Submit
+          </button>
+          {errorMessage && (
+        <div>
+          <p className="error-text">{errorMessage}</p>
+        </div>
+      )}
+        </form>
+      </div>
+      
     </div>
+    
   );
 }
+
+export default Contact;

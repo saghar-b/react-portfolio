@@ -4,6 +4,7 @@ import  image from './Assets/saghar.jpeg'
 
 function NavTabs({ currentPage, handlePageChange }) {
   return (
+    <header >
     <nav className='navbar'>
       <div className='image'>
       <img src={image}  className="d-inline-block align-text-center  "></img>
@@ -23,11 +24,11 @@ function NavTabs({ currentPage, handlePageChange }) {
         <li >
           <a
             href="#portfolio"
-            onClick={() => handlePageChange('Portfolio')}
+            onClick={() => handlePageChange('Work')}
 
-            className={currentPage === 'Portfolio' ? 'nav-link active' : 'nav-link'}
+            className={currentPage === 'Work' ? 'nav-link active' : 'nav-link'}
           >
-            Portfolio
+            My Work
           </a>
         </li>
         <li >
@@ -52,6 +53,7 @@ function NavTabs({ currentPage, handlePageChange }) {
         </li>
       </ul>
     </nav>
+    </header>
   );
 }
 

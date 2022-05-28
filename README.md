@@ -58,7 +58,7 @@ heroku create --buildpack mars/create-react-app  //heroku
 
 The following animation shows the web application's appearance and functionality:
 
-![User clicks through About Me, Portfolio, Resume, and Contact sections on the webpage and enters information on Contact page.](./Assets/20-react-homework-demo-01.gif)
+![User clicks through About Me, Portfolio, Resume, and Contact sections on the webpage and enters information on Contact page.](./20-react-homework-demo-01.gif)
 
 ## Getting Started
 
