@@ -1,17 +1,38 @@
 import React from 'react';
+import './Styles/About.css';
 
 export default function About() {
   return (
-    <div>
-      <h1>About Page</h1>
-      <p>
-        Nunc pharetra finibus est at efficitur. Praesent sed congue diam.
-        Integer gravida dui mauris, ut interdum nunc egestas sed. Aenean sed
-        mollis diam. Nunc aliquet risus ac finibus porta. Nam quis arcu non
-        lectus tincidunt fermentum. Suspendisse aliquet orci porta quam semper
-        imperdiet. Praesent euismod mi justo, faucibus scelerisque risus cursus
-        in. Sed rhoncus mollis diam, sit amet facilisis lectus blandit at.
-      </p>
-    </div>
+    <>
+      <div className='about' >
+        <aside>
+          <h3>About Me</h3>
+          <div className="line "></div>
+
+        </aside>
+        <div className='bio'>
+
+          <p>
+            Full stack developer leveraging a background in architecture to provide unique perspectives on how end-users interact with websites and software platforms. Earned a certificate in Full Stack Web Development from the University Coding Boot Camp. Innovative problem-solver who is passionate about developing apps with a focus on mobile-first design and development. Strengths in creativity, teamwork, and building projects from ideation to execution.
+
+          </p>
+          <div>
+            <h3>TECHNICAL SKILLS</h3>
+            <ul>
+              <li>JavaScript ES6+ </li>
+              <li>CSS3,&ensp;HTML5</li>
+              <li>jQuery, &ensp;Bootstrap, </li>
+              <li>Node</li>
+              <li>Express</li>
+              <li>Express</li>
+              <li>SQL ,&ensp;MySQL </li>
+              <li>React, &ensp;Handlebars</li>
+              <li>GitHubs</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </>
   );
 }

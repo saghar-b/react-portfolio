@@ -36,6 +36,7 @@ img:hover {
 .small-project {
     display: flex;
     flex-direction: row;
+
     /* flex-wrap: wrap; */
 }
 .small-image {
@@ -80,7 +81,7 @@ img:hover {
 
      
     
-        border-bottom: 3px solid var(--dark-navy);
+        border-bottom: 1px solid var(--dark-navy);
         position:relative;
         right: 15px;
         margin-left: 10px;
@@ -101,7 +102,7 @@ img:hover {
     .small-project {
         
         flex-direction: column;
-        
+        margin-top: 30px;
     }
     
     .text-block {

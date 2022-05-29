@@ -11,7 +11,7 @@ export default function Work() {
       <div className='work' >
 
         <aside  >
-          <h3>About me</h3>
+          <h3>My Work</h3>
           <div className="line "></div>
 
         </aside>

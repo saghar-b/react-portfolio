@@ -1,0 +1,113 @@
+:root {
+    --dark-navy: #233554;
+    --light-text: #ccd6f6;
+    --no_color: rgba(0, 0, 0, 0);
+    --baby-blue: rgb(42, 153, 161);
+    --font-sans: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+    --font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+    --fz-xxxxs: 8px;
+    --fz-xxxs: 10px;
+    --fz-xxs: 12px;
+    --fz-xs: 13px;
+    --fz-sm: 14px;
+    --fz-md: 16px;
+    --fz-lg: 18px;
+    --fz-xl: 20px;
+    --fz-xxl: 22px;
+    --detailColor: #ffc107;
+
+}
+
+.main {
+
+    padding: 60px;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.title {
+    text-align: center;
+}
+
+h3 {
+    padding: 20px;
+}
+
+h5 {
+    font-weight: bold;
+}
+
+li {
+    font-size: var(--fz-xxl);
+}
+
+p {
+
+    font-size: var(--fz-xxl);
+}
+
+.btn {
+    background-color: var(--dark-navy);
+    line-height: 1px;
+    width: 250px;
+
+}
+
+@media screen and (max-width: 390px) {
+    .main {
+
+        padding: 20px;
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+
+    .title>h1 {
+        font-size: 16px;
+        padding-bottom: 5px;
+    }
+
+    .title>p {
+
+        font-size: 8px;
+        padding: 0px;
+        text-align: center;
+    }
+
+    .title {
+        text-align: center;
+    }
+
+    p {
+        font-size: 8px;
+        padding: 0px;
+        text-align: left;
+    }
+
+    .main h3 {
+        font-size: var(--fz-xxs);
+        font-weight: bold;
+        padding: 5px;
+
+    }
+
+   .main h5 {
+        font-size: var(--fz-xxxs);
+        font-weight: normal;
+    }
+
+   .main h4 {
+        font-size: var(--fz-xxxs);
+        font-weight: normal;
+    }
+
+    li {
+        font-size: var(--fz-xxxxs);
+    }
+
+    .btn {
+        background-color: var(--dark-navy);
+        line-height: 1px;
+        width: 250px;
+
+    }
+}
