@@ -73,7 +73,7 @@ function Contact() {
           </div>
           <div>
 
-            <textarea
+            <textarea 
               value={message}
               name="mesage"
               onChange={handleInputChange}

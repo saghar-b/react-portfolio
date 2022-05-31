@@ -24,9 +24,64 @@ header{
   text-align: end;
   justify-content: end;
   display: flex;
-  /* justify-content: space-between; */
+}
+.sidenavRight {
+  position: relative;
+  left: 70vh;
+  margin-top: 20px;
+  justify-content: right;
+}
+.v-text{
+  writing-mode: vertical-rl; 
+  position: absolute;
+  left:- 25px;
+}
+h6{
+  color: white;
+}
+.v-line {
+
+  height:100vh;
+  border-left: 1px solid;
+  position: absolute;
+  left: 25px;
+}
+.mySidenavRight{
+
+}
+#mySidenav {
+  position:fixed;
+  top: 800px;
+  margin-left: 30px;
+}
+#mySidenav img:hover {
+  box-shadow: 0 0 0px 1px var(--detailColor);
+ 
+
+}
+#mySidenav a img:hover {
+  border-color: 5px solid var(--detailColor);
+  border-radius: 50%;
 }
 
+.sidenav a {
+
+  padding: 8px 8px 8px 8px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  
+
+
+}
+
+.sidenav>a>img {
+  width: 40px;
+  height: 40px;
+
+}
 .image {
   display: flex;
   flex-direction: row;
@@ -60,8 +115,7 @@ img {
     background: #dab317;
     height: 90px;
     display: flex;
-    /* flex-direction: column; */
-    /* text-align:left; */
+ 
   
   justify-content: left;
  
@@ -70,7 +124,7 @@ img {
   .navbar ul{
     display: flex;
     flex-direction: row;
-    /* justify-content: left; */
+   
     font-size: 8px;
   }
   .navbar ul li a{
@@ -82,12 +136,71 @@ img {
     font-size: 0.5rem;
     text-decoration: none;
     margin: 5px;
-    /* line-height: 3; */
+    
   }
   img {
     height: 75px;
     width: 75px;
   
+  }
+
+  .sidenavRight .v-text{
+    writing-mode: horizontal-tb; 
+  }
+  .v-line {
+
+    height:100vh;
+    border-left: 1px solid;
+    position: absolute;
+    left: 20px;
+    color: var(--detailColor);
+  }
+  #mySidenav {
+    position:fixed;
+    top: 400px;
+    margin-left: 0px;
+  }
+  #mySidenav img:hover {
+    box-shadow: 0 0 0px 1px var(--detailColor);
+   
+  
+  }
+  #mySidenav a img:hover {
+    border-color: 5px solid var(--detailColor);
+    border-radius: 50%;
+  }
+  
+  .sidenav a {
+  
+    padding: 8px 8px 8px 8px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    
+  
+  
+  }
+  
+  .sidenav>a>img {
+    width: 20px;
+    height: 20px;
+  
+  }
+  .image h3 {
+    position: relative;
+    top:10px;
+    padding-left: 25px;
+    color: white;
+  }
+
+  .image h6{
+    position: relative;
+    top:-15px;
+    left:-30px;
+    font-size: 10px;
+    color: white;
   }
 
 }
